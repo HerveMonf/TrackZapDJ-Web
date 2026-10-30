@@ -1,0 +1,6 @@
+.git
+.gitattributes
+.assetsignore
+wrangler.jsonc
+README.md
+CNAME
