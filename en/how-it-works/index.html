@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How TrackZapDJ works — the app in screenshots</title>
+<meta name="description" content="A full walkthrough of TrackZapDJ, screen by screen: opening your Rekordbox collection, finding duplicates, reviewing them, simulating, cleaning up and rolling back.">
+<meta name="theme-color" content="#05070b">
+<meta property="og:title" content="How TrackZapDJ works">
+<meta property="og:description" content="The app in screenshots: from scanning your Rekordbox collection to rolling back a cleanup.">
+<meta property="og:image" content="https://www.trackzapdj.com/images/app/05-resultats.png">
+<meta property="og:image:alt" content="TrackZapDJ results screen: duplicate groups sorted by confidence level">
+<meta property="og:url" content="https://www.trackzapdj.com/en/how-it-works/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TrackZapDJ">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.trackzapdj.com/en/how-it-works/">
+<link rel="alternate" hreflang="fr" href="https://www.trackzapdj.com/fr/fonctionnement/">
+<link rel="alternate" hreflang="en" href="https://www.trackzapdj.com/en/how-it-works/">
+<link rel="alternate" hreflang="x-default" href="https://www.trackzapdj.com/en/how-it-works/">
+<link rel="icon" href="/images/TrackZapDJ.ico">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#contenu">Skip to content</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/en/" aria-label="TrackZapDJ, back to home page">
+      <img src="/images/TrackZapDJ.ico" alt="" width="40" height="40">
+      <span><span class="t1">Track</span><span class="t2">Zap</span><span class="t3">DJ</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="link" href="/en/">Home</a>
+      <a class="link" href="/en/#versions">Free or paid</a>
+      <a class="link" href="/en/#faq">FAQ</a>
+      <span class="lang" role="group" aria-label="Language">
+        <a href="/fr/fonctionnement/" hreflang="fr" lang="fr" data-lang="fr" title="Français">FR</a>
+        <span aria-current="true" lang="en">EN</span>
+      </span>
+      <a class="btn btn-yellow btn-nav" href="/en/#lancement">Free version</a>
+    </nav>
+  </div>
+  <hr class="glow">
+</header>
+
+<main id="contenu" tabindex="-1">
+
+  <div class="wrap howto">
+    <span class="kicker">How it works</span>
+    <h1>TrackZapDJ, <span class="y">screen by screen</span></h1>
+    <p class="sub">
+      Here is the full journey through the app, from opening your Rekordbox collection to rolling back a cleanup.
+      The screenshots come from a real collection of more than 74,000 tracks; file paths and a few personal details have been blurred.
+      Click a screenshot to view it full size.
+    </p>
+    <p class="callout lang-note">
+      <strong>The screenshots show the French interface:</strong> for now, TrackZapDJ is only available in French.
+      An English version will be available at the official launch.
+    </p>
+    <p class="callout">
+      <strong>Free or paid?</strong> Steps 1 to 4 (scan, review, preview and simulation) are part of the free version.
+      Applying the cleanup and rolling back (steps 5 and 6) will be reserved for the paid version, coming later.
+    </p>
+    <nav aria-label="Steps">
+      <ol class="toc">
+        <li><a href="#ouvrir">Open the collection</a></li>
+        <li><a href="#analyser">Scan</a></li>
+        <li><a href="#verifier">Review</a></li>
+        <li><a href="#simuler">Preview and simulate</a></li>
+        <li class="paid"><a href="#appliquer">Apply the cleanup</a></li>
+        <li class="paid"><a href="#restaurer">Roll back</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- 1. OPEN -->
+  <section class="howto-step" id="ouvrir" aria-labelledby="t-ouvrir">
+    <div class="wrap">
+      <div class="howto-head">
+        <span class="howto-num" aria-hidden="true">1</span>
+        <div><span class="pill free">Free</span><h2 id="t-ouvrir">Open your collection</h2></div>
+      </div>
+      <p class="sub">
+        When the app starts, pick your DJ software. Rekordbox is available; Serato DJ Pro, VirtualDJ and Traktor Pro are in development.
+        Before the first scan, TrackZapDJ asks where to save the Excel reports and the activity log.
+      </p>
+      <p class="sub">
+        Once the collection is loaded, you can see at a glance how many tracks, playlists and history sessions it contains.
+      </p>
+      <div class="shots">
+        <figure class="shot main">
+          <a href="/images/app/01-accueil.png"><img src="/images/app/01-accueil.png" width="1506" height="986" loading="lazy" alt="TrackZapDJ start screen asking which DJ software you use: rekordbox is available, Serato DJ Pro, VirtualDJ and Traktor Pro are in development."></a>
+          <figcaption>The start screen: choosing your DJ software.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="/images/app/02-dossiers.png"><img src="/images/app/02-dossiers.png" width="866" height="466" loading="lazy" alt="“TrackZapDJ folders” window: choosing the folder for Excel reports and the folder for logs."></a>
+          <figcaption>First launch: where to save Excel reports and logs.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="/images/app/03-collection.png"><img src="/images/app/03-collection.png" width="1506" height="986" loading="lazy" alt="Main window after loading: 74,156 tracks, 77 playlists and 569 history sessions."></a>
+          <figcaption>Collection loaded: 74,156 tracks, 77 playlists, 569 history sessions.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SCAN -->
+  <section class="howto-step" id="analyser" aria-labelledby="t-analyser">
+    <div class="wrap">
+      <div class="howto-head">
+        <span class="howto-num" aria-hidden="true">2</span>
+        <div><span class="pill free">Free</span><h2 id="t-analyser">Run the scan</h2></div>
+      </div>
+      <p class="sub">
+        <strong>“Analyse fichier”</strong> (file scan) groups tracks with the same artist and title;
+        <strong>“Analyse musicale”</strong> (musical scan) relies on key, BPM and duration. File contents are then compared (hash)
+        to spot strictly identical copies. Progress is shown live and the scan can be cancelled at any time.
+      </p>
+      <p class="sub">
+        Each group gets a colour-coded confidence level. <strong>“Exporter Excel”</strong> saves the whole analysis to an Excel file.
+      </p>
+      <div class="shots">
+        <figure class="shot">
+          <a href="/images/app/04-analyse-en-cours.png"><img src="/images/app/04-analyse-en-cours.png" width="1506" height="986" loading="lazy" alt="Scan in progress: progress bar, groups appearing as they are found, and a Cancel button."></a>
+          <figcaption>Scan in progress: groups appear as they are found.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="/images/app/05-resultats.png"><img src="/images/app/05-resultats.png" width="1506" height="986" loading="lazy" alt="Scan results: list of duplicate groups with confidence, artist, title, album, occurrences, format, bitrate and cues."></a>
+          <figcaption>Results: duplicate groups, sorted by confidence level.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. REVIEW -->
+  <section class="howto-step" id="verifier" aria-labelledby="t-verifier">
+    <div class="wrap">
+      <div class="howto-head">
+        <span class="howto-num" aria-hidden="true">3</span>
+        <div><span class="pill free">Free</span><h2 id="t-verifier">Review each group</h2></div>
+      </div>
+      <p class="sub">
+        Select a group to see its tracks in detail (duration, format, BPM, key, bitrate, size, cues, playlists, date added, path).
+        TrackZapDJ suggests which track to keep; in case of a tie, it decides by cues, then playlists, then quality.
+      </p>
+      <p class="sub">
+        You have the final say: <strong>“Conserver celui-ci”</strong> (keep this one) to pick another track,
+        <strong>“Valider ce groupe”</strong> (approve this group), <strong>“Écarter ce groupe”</strong> (leave this group out),
+        or <strong>“Valider tous les 100 %”</strong> (approve all 100% groups) at once. Nothing is deleted without a final confirmation.
+      </p>
+      <div class="shots">
+        <figure class="shot">
+          <a href="/images/app/06-detail-groupe.png"><img src="/images/app/06-detail-groupe.png" width="1506" height="986" loading="lazy" alt="Group detail: one track marked “À conserver” (to keep) and its duplicate, with their properties."></a>
+          <figcaption>Group detail: the suggested track to keep and its duplicate.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="/images/app/07-groupe-valide.png"><img src="/images/app/07-groupe-valide.png" width="1506" height="986" loading="lazy" alt="Group marked “Validé” (approved); the “Supprimer validés (1)” button becomes active."></a>
+          <figcaption>Group approved: “Supprimer validés” shows how many groups are ready.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SIMULATE -->
+  <section class="howto-step" id="simuler" aria-labelledby="t-simuler">
+    <div class="wrap">
+      <div class="howto-head">
+        <span class="howto-num" aria-hidden="true">4</span>
+        <div><span class="pill free">Free</span><h2 id="t-simuler">Preview and simulate</h2></div>
+      </div>
+      <p class="sub">
+        <strong>“Supprimer validés”</strong> (delete approved) first opens a preview: tracks removed from the database, files moved to the backup folder,
+        space freed, playlist and Automix entries redirected. The detail for each file shows whether it is identical to the kept track.
+        You can still untick a group to leave it out.
+      </p>
+      <p class="sub">
+        <strong>“Simuler (aucune modification)”</strong> (simulate, no changes) produces the full result and an Excel report without touching anything.
+      </p>
+      <p class="callout">The free version goes this far: preview and simulation are available, applying the cleanup is not.</p>
+      <div class="shots">
+        <figure class="shot">
+          <a href="/images/app/08-apercu-detail.png"><img src="/images/app/08-apercu-detail.png" width="1206" height="752" loading="lazy" alt="Cleanup preview window: summary of the cleanup and detail for one file, moved to the backup and identical to the kept track."></a>
+          <figcaption>The preview, with the detail for each file.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="/images/app/10-simulation.png"><img src="/images/app/10-simulation.png" width="1506" height="986" loading="lazy" alt="Simulation result: “SIMULATION — rien n'a été modifié” (nothing was changed), with the number of groups, tracks, files, playlists and Automix entries involved."></a>
+          <figcaption>Simulation result: nothing was changed.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. APPLY -->
+  <section class="howto-step paid" id="appliquer" aria-labelledby="t-appliquer">
+    <div class="wrap">
+      <div class="howto-head">
+        <span class="howto-num" aria-hidden="true">5</span>
+        <div><span class="pill paid">Paid · coming</span><h2 id="t-appliquer">Apply the cleanup</h2></div>
+      </div>
+      <p class="sub">
+        To apply it, type <strong>“SUPPRIMER”</strong> (delete) and confirm: having to type it prevents accidental clicks.
+        TrackZapDJ first backs up your database, then removes the duplicates, redirects playlists, history and Automix to the kept track,
+        and moves the removed files to the backup folder. An Excel report sums up the operation.
+      </p>
+      <div class="shots">
+        <figure class="shot">
+          <a href="/images/app/09-apercu-confirmation.png"><img src="/images/app/09-apercu-confirmation.png" width="1206" height="816" loading="lazy" alt="Cleanup preview with the word SUPPRIMER typed in the confirmation field."></a>
+          <figcaption>To apply the cleanup, you have to type “SUPPRIMER”.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="/images/app/12-apres-nettoyage.png"><img src="/images/app/12-apres-nettoyage.png" width="1506" height="986" loading="lazy" alt="Main window after the cleanup: “Suppression terminée avec succès” (cleanup completed), the collection now has 74,155 tracks."></a>
+          <figcaption>After the cleanup: the collection has one track fewer.</figcaption>
+        </figure>
+        <figure class="shot small">
+          <a href="/images/app/11-nettoyage-effectue.png"><img src="/images/app/11-nettoyage-effectue.png" width="766" height="556" loading="lazy" alt="“SUPPRESSION EFFECTUÉE” (cleanup done) summary: backup folder, groups processed, tracks deleted, files backed up, playlists and Automix redirected, Excel report."></a>
+          <figcaption>The summary: backup, tracks deleted, files backed up, Excel report.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ROLL BACK -->
+  <section class="howto-step paid" id="restaurer" aria-labelledby="t-restaurer">
+    <div class="wrap">
+      <div class="howto-head">
+        <span class="howto-num" aria-hidden="true">6</span>
+        <div><span class="pill paid">Paid · coming</span><h2 id="t-restaurer">Roll back</h2></div>
+      </div>
+      <p class="sub">
+        The cleanup history keeps the last 5 cleanups. Pick one and go back to the state before it: the database and the files return to their place.
+      </p>
+      <p class="sub">
+        Rolling back a cleanup also cancels any more recent ones, and whatever you did in Rekordbox since then
+        (tracks added, playlists, sets played) is lost. TrackZapDJ reminds you of this before going ahead.
+      </p>
+      <div class="shots">
+        <figure class="shot main">
+          <a href="/images/app/13-historique.png"><img src="/images/app/13-historique.png" width="986" height="556" loading="lazy" alt="“Historique des nettoyages” (cleanup history) window: list of cleanups with date, tracks deleted, files backed up, size and status, and a button to go back to the state before the selected cleanup."></a>
+          <figcaption>The cleanup history: the last 5 cleanups can be rolled back.</figcaption>
+        </figure>
+        <figure class="shot small">
+          <a href="/images/app/14-confirmation-restauration.png"><img src="/images/app/14-confirmation-restauration.png" width="417" height="254" loading="lazy" alt="“Restaurer une sauvegarde” (restore a backup) confirmation: cleanups cancelled, tracks put back, and a warning about changes made in Rekordbox since then."></a>
+          <figcaption>Before restoring, TrackZapDJ spells out what will be undone.</figcaption>
+        </figure>
+        <figure class="shot small">
+          <a href="/images/app/15-restauration-effectuee.png"><img src="/images/app/15-restauration-effectuee.png" width="766" height="556" loading="lazy" alt="“RESTAURATION EFFECTUÉE” (restore done): cleanups cancelled and tracks put back."></a>
+          <figcaption>Restore complete.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap howto-end final">
+    <div class="box">
+      <h2>Ready to <span class="y">zap</span> your duplicates?</h2>
+      <p class="sub">Start with the free version: scan, review and simulate, without changing anything.</p>
+      <div class="cta" style="justify-content:center">
+        <a class="btn btn-yellow" href="/en/#lancement">⚡ Free version</a>
+        <a class="btn btn-ghost" href="/en/#versions">Free or paid?</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="t1">Track</span><span class="t2">Zap</span><span class="t3">DJ</span> — Clean your DJ library</div>
+    <div class="note"><a href="mailto:contact@trackzapdj.com">contact@trackzapdj.com</a> · © 2026 TrackZapDJ</div>
+    <nav class="legal" aria-label="Legal information">
+      <a href="/en/legal/#legal-notice">Legal notice</a>
+      <a href="/en/legal/#terms-of-sale">Terms of sale</a>
+      <a href="/en/legal/#privacy">Privacy policy</a>
+    </nav>
+    <div class="note">Rekordbox, Serato, VirtualDJ and Traktor are trademarks of their respective owners. TrackZapDJ is an independent project, not affiliated with them.</div>
+  </div>
+</footer>
+
+</body>
+</html>
