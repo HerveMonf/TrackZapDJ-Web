@@ -26,8 +26,8 @@
   "previews": {
     "vars": {
       "MODE": "test",
-      "PAYMENT_LINK_URL": "",
-      "PAYMENT_LINK_ID": ""
+      "PAYMENT_LINK_URL": "https://buy.stripe.com/test_7sY9ASazgcgpeBDh0TaR200",
+      "PAYMENT_LINK_ID": "plink_1UX4kGCHAY76e5LthwbK5PTI"
     }
   }
 }
