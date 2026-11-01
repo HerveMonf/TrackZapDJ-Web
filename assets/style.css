@@ -150,6 +150,7 @@ h2 .y { color: var(--yellow); }
 }
 
 .grid { display: grid; gap: 20px; margin-top: 40px; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.grid.four { grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); }
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -253,7 +254,7 @@ h2 .y { color: var(--yellow); }
   padding: 16px 22px; min-width: min(240px, 100%);
 }
 .soft strong { font-size: 1.05rem; }
-.tag { margin-left: auto; font-size: .75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+.tag { margin-left: auto; font-size: .75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
 .tag.first { color: var(--green); background: rgba(61,220,132,.1); border: 1px solid rgba(61,220,132,.35); }
 .tag.next { color: var(--muted); background: rgba(140,155,174,.08); border: 1px solid var(--border); }
 
@@ -326,6 +327,21 @@ footer .legal { margin-top: 10px; display: flex; gap: 6px 18px; justify-content:
 .doc-part p, .doc-part li { color: var(--muted); }
 .doc-part ul { margin: 10px 0 0 20px; display: grid; gap: 6px; }
 
+/* Promesse sous le titre principal */
+.hero .promise-note { max-width: 620px; margin: -14px 0 24px; color: var(--muted); font-size: .97rem; }
+.hero .promise-note strong { color: var(--text); }
+.card .pill { display: inline-block; justify-self: start; margin-bottom: 8px; }
+
+/* Histoire du fondateur */
+.founder {
+  margin-top: 28px; max-width: 820px; padding: 26px 28px;
+  background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--yellow);
+  border-radius: var(--radius);
+}
+.founder p { color: var(--muted); }
+.founder p + p { margin-top: 10px; }
+.founder strong { color: var(--text); }
+
 /* Page « Comment ça marche » */
 .howto { padding: 56px 0 24px; }
 .howto h1 { font-size: clamp(1.9rem, 4.4vw, 2.8rem); margin: 8px 0 14px; line-height: 1.15; }
@@ -378,6 +394,43 @@ footer .legal { margin-top: 10px; display: flex; gap: 6px 18px; justify-content:
 .chooser { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 32px 16px; }
 .chooser img { width: 120px; border-radius: 24px; margin-bottom: 18px; }
 .chooser .cta { justify-content: center; margin-top: 24px; }
+
+/* Mobile : moins de défilement, cartes compactes (icône à gauche du texte) */
+@media (max-width: 600px) {
+  section { padding: 48px 0; }
+  .hero { padding: 28px 0 44px; }
+  .hero img.logo { display: none; }
+  .hero h1 { margin-top: 16px; }
+  .hero p.lead { font-size: 1.02rem; margin-bottom: 22px; }
+  .hero .promise-note { margin-top: -8px; }
+  .sub { font-size: 1rem; }
+  .grid { gap: 12px; margin-top: 24px; }
+  .card {
+    padding: 16px 18px; display: grid; grid-template-columns: 40px 1fr;
+    column-gap: 14px; align-items: start;
+  }
+  .card .ico { width: 40px; height: 40px; font-size: 1.15rem; margin: 0; grid-row: span 3; }
+  .card > :not(.ico) { grid-column: 2; }
+  .card h3 { font-size: 1.02rem; margin-bottom: 4px; }
+  .card p { font-size: .93rem; }
+  .answer { margin-top: 22px; font-size: 1.05rem; }
+  .plans { gap: 16px; margin-top: 24px; }
+  .plan ul { gap: 6px; margin: 14px 0 16px; }
+  .plan li { font-size: .95rem; }
+  .price strong { font-size: 1.9rem; }
+  .indie, .founder { margin-top: 20px; }
+  .founder { padding: 20px 18px; }
+  .steps { gap: 24px 12px; margin-top: 32px; }
+  .step { padding: 24px 18px 16px; }
+  .caution { margin-top: 20px; padding: 14px 16px; font-size: .92rem; }
+  .compat { gap: 10px; margin-top: 16px; }
+  .soft { padding: 10px 14px; min-width: 0; flex: 1 1 100%; }
+  .compat-label { margin-top: 22px; }
+  .faq { margin-top: 24px; gap: 10px; }
+  .faq details { padding: 14px 16px; }
+  .faq summary { font-size: .97rem; }
+  .final .box { padding: 36px 18px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
