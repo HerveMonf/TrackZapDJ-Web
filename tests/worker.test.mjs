@@ -135,11 +135,14 @@ describe("achat", () => {
   });
 
   test("boutique : ouverte quand tout est configuré, sinon renvoi vers la page d'achat", async () => {
-    assert.deepEqual(await answer("/api/boutique"), [200, { mode: "test", open: true }]);
+    assert.deepEqual(await answer("/api/boutique"), [200, { mode: "test", open: true, missing: [] }]);
     let response = await call("/api/achat");
     assert.equal(response.headers.get("Location"), "https://buy.stripe.com/test_abc");
     delete env.PAYMENT_LINK_URL;
-    assert.deepEqual(await answer("/api/boutique"), [200, { mode: "test", open: false }]);
+    assert.deepEqual(await answer("/api/boutique"), [
+      200,
+      { mode: "test", open: false, missing: ["PAYMENT_LINK_URL"] },
+    ]);
     response = await call("/api/achat?lang=en");
     assert.match(response.headers.get("Location"), /\/en\/buy\/#indisponible$/);
   });

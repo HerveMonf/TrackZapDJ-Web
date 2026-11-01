@@ -60,10 +60,15 @@ function json(status, body) {
 }
 
 // La boutique est ouverte quand tout ce qu'il faut pour vendre est configuré.
+const REQUIRED = ["LICENCES", "PAYMENT_LINK_URL", "STRIPE_SECRET_KEY", "LICENCE_PRIVATE_KEY"];
+
+// Noms des réglages absents (jamais leurs valeurs), pour la mise en service.
+function missingSettings(env) {
+  return [...REQUIRED, "STRIPE_WEBHOOK_SECRET"].filter((name) => !env[name]);
+}
+
 export function shopOpen(env) {
-  return Boolean(
-    env.LICENCES && env.PAYMENT_LINK_URL && env.STRIPE_SECRET_KEY && env.LICENCE_PRIVATE_KEY,
-  );
+  return REQUIRED.every((name) => Boolean(env[name]));
 }
 
 async function readJson(request) {
@@ -80,7 +85,11 @@ async function api(request, env, url) {
   const path = url.pathname;
 
   if (path === "/api/boutique") {
-    return json(200, { mode: env.MODE === "live" ? "live" : "test", open: shopOpen(env) });
+    return json(200, {
+      mode: env.MODE === "live" ? "live" : "test",
+      open: shopOpen(env),
+      missing: missingSettings(env),
+    });
   }
 
   if (path === "/api/achat") {
