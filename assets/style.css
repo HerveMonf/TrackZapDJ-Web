@@ -481,3 +481,21 @@ footer .legal { margin-top: 10px; display: flex; gap: 6px 18px; justify-content:
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .btn:hover, .card:hover { transform: none; }
 }
+
+/* Boutique : page d'achat et page de remerciement */
+.callout.test-mode { border-color: rgba(255,210,31,.5); background: rgba(255,210,31,.08); }
+.callout code, .doc-part code, .sub code { font-family: Consolas, "Courier New", monospace; color: var(--yellow); }
+.buy-steps { margin: 10px 0 12px 22px; display: grid; gap: 8px; color: var(--muted); }
+.buy-steps strong { color: var(--text); }
+.buy-cta { margin: 28px 0; display: grid; gap: 14px; justify-items: start; }
+.buy-cta .small { color: var(--muted); font-size: .88rem; max-width: 760px; }
+.buy-cta .small a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.licence-key {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 18px 0 8px;
+  padding: 18px 22px; border-radius: 14px; border: 1px solid rgba(255,210,31,.5); background: var(--card);
+}
+.licence-key code {
+  font-family: Consolas, "Courier New", monospace; font-size: clamp(1.1rem, 4vw, 1.6rem);
+  font-weight: 700; letter-spacing: .06em; color: var(--yellow); word-break: break-all;
+}
+.doc .small { color: var(--muted); font-size: .88rem; }

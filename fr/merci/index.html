@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merci pour votre achat — TrackZapDJ</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#05070b">
+<link rel="icon" href="/images/TrackZapDJ.ico">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/fr/" aria-label="TrackZapDJ, retour à l'accueil">
+      <img src="/images/TrackZapDJ.ico" alt="" width="40" height="40">
+      <span><span class="t1">Track</span><span class="t2">Zap</span><span class="t3">DJ</span></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a class="link" href="/fr/">Accueil</a>
+    </nav>
+  </div>
+  <hr class="glow">
+</header>
+
+<main class="wrap doc" id="contenu" tabindex="-1" data-claim data-shop>
+  <span class="kicker">Merci !</span>
+  <h1>Votre <span class="y">clé de licence</span></h1>
+
+  <p class="callout test-mode" data-test-mode hidden>
+    <strong>Site de test.</strong> Cette clé vient d'un paiement de test : elle ne fonctionne que dans les préversions de TrackZapDJ.
+  </p>
+
+  <p class="sub" data-state="loading">Vérification du paiement auprès de Stripe…</p>
+
+  <div data-state="done" hidden>
+    <div class="licence-key">
+      <code data-key></code>
+      <button class="btn btn-ghost" type="button" data-copy>Copier</button>
+    </div>
+    <p class="small" data-copied hidden>Clé copiée.</p>
+    <section class="doc-part">
+      <div class="doc-head"><h2>Notez-la dès maintenant</h2></div>
+      <p>Gardez cette clé (gestionnaire de mots de passe, e-mail à vous-même…). Elle sert aussi pour réinstaller TrackZapDJ
+        ou changer d'ordinateur. Cette page la réaffiche tant que vous gardez son adresse.</p>
+    </section>
+    <section class="doc-part">
+      <div class="doc-head"><h2>Activer la licence</h2></div>
+      <ol class="buy-steps">
+        <li>Ouvrez TrackZapDJ, menu <strong>Fichier → Licence…</strong></li>
+        <li>Collez la clé, puis cliquez sur <strong>Activer</strong> (connexion Internet nécessaire, une seule fois).</li>
+        <li>Le bouton « Appliquer la suppression » est débloqué. Bon ménage !</li>
+      </ol>
+    </section>
+  </div>
+
+  <div data-state="error" hidden>
+    <p class="callout">
+      <span data-error-text>La clé n'a pas pu être obtenue.</span>
+      Si vous avez été débité, écrivez à <a href="mailto:contact@trackzapdj.com">contact@trackzapdj.com</a>
+      avec l'adresse e-mail utilisée pour le paiement : je vous envoie votre clé.
+    </p>
+    <p><button class="btn btn-ghost" type="button" data-retry>Réessayer</button></p>
+  </div>
+
+  <div data-state="missing" hidden>
+    <p class="callout">
+      Cette page s'affiche après un paiement. Vous avez payé mais vous n'avez pas reçu votre clé ? Écrivez à
+      <a href="mailto:contact@trackzapdj.com">contact@trackzapdj.com</a> avec l'adresse e-mail utilisée pour le paiement.
+    </p>
+  </div>
+
+  <template data-messages>
+    <span data-code="not_paid">Le paiement n'est pas encore confirmé par Stripe.</span>
+    <span data-code="unknown_session">Ce paiement est introuvable.</span>
+    <span data-code="network">Impossible de joindre le serveur. Vérifiez votre connexion.</span>
+  </template>
+
+  <p><a class="btn btn-ghost" href="/fr/">← Retour à l'accueil</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="t1">Track</span><span class="t2">Zap</span><span class="t3">DJ</span> — Clean your DJ library</div>
+    <div class="note"><a href="mailto:contact@trackzapdj.com">contact@trackzapdj.com</a> · © 2026 TrackZapDJ</div>
+  </div>
+</footer>
+
+</body>
+</html>

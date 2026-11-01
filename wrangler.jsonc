@@ -5,8 +5,29 @@
   "assets": {
     "directory": "./",
     "binding": "ASSETS",
-    // La racine "/" passe toujours par le Worker (choix de la langue).
-    "run_worker_first": ["/", "/index.html"]
+    // Passent toujours par le Worker : la racine "/" et "/merci" (choix de la langue),
+    // et l'API de la boutique et des licences.
+    "run_worker_first": ["/", "/index.html", "/merci", "/merci/", "/api/*"]
   },
-  "previews": {}
+
+  // Site en ligne (branche main) : vrais paiements.
+  // Secrets à définir dans Cloudflare (Settings > Variables and secrets > Production) :
+  // STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, LICENCE_PRIVATE_KEY.
+  // Tant que PAYMENT_LINK_URL est vide, la boutique affiche « ventes pas encore ouvertes ».
+  "vars": {
+    "MODE": "live",
+    "PAYMENT_LINK_URL": "",
+    "PAYMENT_LINK_ID": ""
+  },
+
+  // Previews (branche develop, site de test) : Stripe en mode test.
+  // Rien n'est hérité du site en ligne : variables, secrets et stockage sont séparés.
+  // Secrets : mêmes noms, réglés sur « Previews » dans Cloudflare.
+  "previews": {
+    "vars": {
+      "MODE": "test",
+      "PAYMENT_LINK_URL": "",
+      "PAYMENT_LINK_ID": ""
+    }
+  }
 }
