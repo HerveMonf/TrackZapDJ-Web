@@ -19,6 +19,8 @@
     "PAYMENT_LINK_URL": "",
     "PAYMENT_LINK_ID": ""
   },
+  // Licences vendues (KV « trackzapdj-licences »).
+  "kv_namespaces": [{ "binding": "LICENCES", "id": "4efcb12df84d4d528602600aeb96a5b7" }],
 
   // Previews (branche develop, site de test) : Stripe en mode test.
   // Rien n'est hérité du site en ligne : variables, secrets et stockage sont séparés.
@@ -28,6 +30,8 @@
       "MODE": "test",
       "PAYMENT_LINK_URL": "https://buy.stripe.com/test_7sY9ASazgcgpeBDh0TaR200",
       "PAYMENT_LINK_ID": "plink_1UX4kGCHAY76e5LthwbK5PTI"
-    }
+    },
+    // Licences de test (KV « trackzapdj-licences-preview »), jamais mélangées aux vraies.
+    "kv_namespaces": [{ "binding": "LICENCES", "id": "c0d2207f66a548d3aa84174f6a6255b6" }]
   }
 }
