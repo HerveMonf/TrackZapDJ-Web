@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TrackZapDJ — Repérez et nettoyez les doublons de votre bibliothèque DJ</title>
-<meta name="description" content="TrackZapDJ, petit logiciel indépendant pour DJ : la version gratuite analyse votre bibliothèque Rekordbox 6.x ou 7.x sur PC et prépare un plan pour ses doublons, sans rien modifier. Le nettoyage automatique viendra ensuite en achat unique.">
+<title>TrackZapDJ — Vos tracks en un seul exemplaire, un stockage optimisé</title>
+<meta name="description" content="TrackZapDJ repère les morceaux importés plusieurs fois dans votre collection Rekordbox et vous aide à n'en garder qu'une copie, sans toucher à vos remixes ni à vos edits. Playlists, historiques et tags conservés. Scan gratuit, nettoyage à 3,99 € en achat unique. PC, Rekordbox 6.x et 7.x, 100 % local.">
 <meta name="theme-color" content="#05070b">
-<meta property="og:title" content="TrackZapDJ — Clean your DJ library">
-<meta property="og:description" content="Repérez les doublons de votre bibliothèque DJ gratuitement, nettoyez quand vous êtes prêt. Un petit logiciel indépendant, traitement 100 % local.">
+<meta property="og:title" content="TrackZapDJ — Vos tracks en un seul exemplaire">
+<meta property="og:description" content="Un stockage optimisé, remixes, playlists et historique intacts : TrackZapDJ repère les morceaux importés plusieurs fois et conserve vos playlists, historiques et tags. Scan gratuit, 100 % local.">
 <meta property="og:image" content="https://www.trackzapdj.com/images/TrackZapDJ-LogoCarre.png">
 <meta property="og:image:alt" content="Logo TrackZapDJ : disque vinyle traversé d'un éclair jaune">
 <meta property="og:url" content="https://www.trackzapdj.com/fr/">
@@ -35,10 +35,9 @@
       <span><span class="t1">Track</span><span class="t2">Zap</span><span class="t3">DJ</span></span>
     </a>
     <nav aria-label="Navigation principale">
+      <a class="link" href="#comment">Comment ça marche</a>
       <a class="link" href="#versions">Gratuit ou payant</a>
-      <a class="link" href="/fr/fonctionnement/">Comment ça marche</a>
-      <a class="link opt" href="#fonctions">Fonctionnalités</a>
-      <a class="link opt" href="#securite">Sécurité</a>
+      <a class="link opt" href="/fr/fonctionnement/">En images</a>
       <a class="link" href="#faq">FAQ</a>
       <span class="lang" role="group" aria-label="Langue">
         <span aria-current="true" lang="fr">FR</span>
@@ -57,337 +56,159 @@
     <div>
       <span class="soon" data-prelaunch><span class="dot" aria-hidden="true"></span>Version gratuite : lancement prévu début novembre</span>
       <span class="soon" data-launched hidden><span class="dot" aria-hidden="true"></span>Version gratuite disponible</span>
-      <h1>Repérez les doublons de votre bibliothèque DJ. <em>Nettoyez quand vous êtes prêt.</em></h1>
+      <h1>Vos tracks en un seul exemplaire. <em>Un stockage optimisé. Remixes, playlists et historique intacts.</em></h1>
       <p class="lead">
-        <strong>TrackZapDJ</strong> est un petit logiciel indépendant pour les DJ.
-        Il analyse votre collection, regroupe les doublons et vous propose un plan d'action clair :
-        quel morceau garder, lesquels retirer. Tout se passe sur votre ordinateur.
-        <strong>Première version : PC, Rekordbox 6.x et 7.x.</strong>
+        <strong>TrackZapDJ</strong> repère les morceaux importés plusieurs fois dans votre collection, tout en conservant
+        vos playlists, historiques et tags. Pour Rekordbox, puis VirtualDJ, Serato et Traktor. 100 % local.
       </p>
       <div class="cta">
         <a class="btn btn-primary" data-prelaunch href="mailto:contact@trackzapdj.com?subject=Pr%C3%A9venez-moi%20de%20la%20sortie%20de%20TrackZapDJ&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20%C3%AAtre%20pr%C3%A9venu(e)%20de%20la%20sortie%20de%20la%20version%20gratuite%20de%20TrackZapDJ.%0A%0ALogiciel%20DJ%20utilis%C3%A9%20%3A%20">
           ⚡ Me prévenir de la sortie
         </a>
-        <a class="btn btn-primary" data-launched data-download hidden>⚡ Télécharger la version gratuite</a>
-        <a class="btn btn-ghost" href="#versions">Gratuit ou payant ?</a>
+        <a class="btn btn-primary" data-launched data-download hidden>⚡ Scanner ma bibliothèque — gratuit</a>
+        <a class="btn btn-ghost" href="#versions">Nettoyer — 3,99 € · bientôt</a>
       </div>
-      <ul class="offer" aria-label="Les deux versions en bref">
-        <li><span class="pill free">Gratuit</span><span><strong>Analyse et plan d'action</strong>, sans rien modifier dans votre bibliothèque.</span></li>
-        <li><span class="pill paid">À venir</span><span><strong>Exécution du nettoyage</strong> en version payante : achat unique, sans abonnement.</span></li>
-      </ul>
+      <p class="microcopy">Le scan ne touche à rien · Achat unique, pas d'abonnement</p>
+      <p class="byline">Réalisé par Hervé, DJ amateur et « un peu » bordélique, pour nettoyer sa propre collection. <a href="#histoire">Son histoire</a></p>
     </div>
     <img class="logo" src="/images/TrackZapDJ-LogoCarre.png" alt="Logo TrackZapDJ : disque vinyle traversé d'un éclair jaune" width="340" height="340">
   </div>
 
   <hr class="glow">
 
-  <!-- LE PROBLÈME -->
+  <!-- LE DÉCLIC -->
   <section id="probleme">
     <div class="wrap">
-      <span class="kicker">Vous vous reconnaissez ?</span>
-      <h2>Une bibliothèque qui grossit… et qui <span class="y">vous ralentit</span></h2>
-      <p class="sub">
-        Chaque nouvel import, chaque disque dur fusionné, chaque morceau retéléchargé ajoute sa copie.
-      </p>
-
+      <span class="kicker">Ça vous parle ?</span>
+      <h2>On est tous <span class="y">passés par là</span></h2>
       <div class="grid">
         <div class="card pain">
-          <div class="ico" aria-hidden="true">🔁</div>
-          <h3>Le même titre, trois fois</h3>
-          <p>Laquelle a vos cues ? Laquelle est dans la bonne playlist ? Laquelle est en meilleure qualité ? Impossible de savoir d'un coup d'œil.</p>
+          <div class="ico" aria-hidden="true">👻</div>
+          <h3>Les doublons qu'on ne voit pas</h3>
+          <p>Le même titre importé trois fois. Laquelle a vos cues ? Bonne question.</p>
+        </div>
+        <div class="card pain">
+          <div class="ico" aria-hidden="true">🎚️</div>
+          <h3>Le mauvais clic</h3>
+          <p>Supprimer la mauvaise copie : une playlist trouée, des hot cues envolés, un set qu'on ne rejoue plus.</p>
         </div>
         <div class="card pain">
           <div class="ico" aria-hidden="true">💽</div>
-          <h3>De l'espace disque gaspillé</h3>
-          <p>Des gigaoctets de fichiers en double sur votre ordinateur et vos clés USB, que vous n'osez pas supprimer.</p>
-        </div>
-        <div class="card pain">
-          <div class="ico" aria-hidden="true">😬</div>
-          <h3>La peur de tout casser</h3>
-          <p>Faire le ménage à la main, c'est risquer de perdre des playlists, des cues, des historiques ou des heures de préparation.</p>
+          <h3>Le disque qui sature</h3>
+          <p>Chaque copie prend de la place sur le disque et encombre la collection. Pour rien.</p>
         </div>
       </div>
-
-      <p class="answer">TrackZapDJ s'occupe du tri. <span class="y">Vous gardez le contrôle.</span></p>
-    </div>
-  </section>
-
-  <!-- LES DEUX VERSIONS -->
-  <section id="versions" class="alt">
-    <div class="wrap">
-      <span class="kicker">Deux versions</span>
-      <h2>Analyser est gratuit. <span class="y">Exécuter le nettoyage</span> sera payant.</h2>
-      <p class="sub">
-        La version gratuite vous montre précisément ce qu'il faudrait faire, sans toucher à rien.
-        La version payante appliquera ce plan pour vous, après votre confirmation.
-      </p>
-
-      <div class="plans">
-        <article class="plan free" aria-labelledby="plan-free">
-          <div class="plan-head">
-            <div>
-              <h3 id="plan-free">Version gratuite</h3>
-              <p class="role">Analyser et préparer le plan</p>
-            </div>
-            <span class="status free" data-prelaunch>Au lancement</span>
-            <span class="status free" data-launched hidden>Disponible</span>
-          </div>
-          <p class="price"><strong>0&nbsp;€</strong><span>gratuite</span></p>
-          <ul>
-            <li>Analyse de votre bibliothèque Rekordbox 6.x ou 7.x</li>
-            <li>Groupes de doublons avec un niveau de confiance</li>
-            <li>Doublons cachés repérés grâce à la tonalité, au BPM et à la durée</li>
-            <li>Vérification du contenu des fichiers au bit près</li>
-            <li>Meilleure version à conserver suggérée</li>
-            <li>Plan d'action détaillé, groupe par groupe</li>
-            <li>Export Excel de toute l'analyse des doublons</li>
-            <li>Aperçu et simulation du nettoyage, sans aucune modification</li>
-          </ul>
-          <p class="note"><strong>Aucune modification :</strong> votre bibliothèque et vos fichiers restent exactement tels quels.</p>
-          <a class="btn btn-primary" data-prelaunch href="mailto:contact@trackzapdj.com?subject=Pr%C3%A9venez-moi%20de%20la%20sortie%20de%20TrackZapDJ&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20%C3%AAtre%20pr%C3%A9venu(e)%20de%20la%20sortie%20de%20la%20version%20gratuite%20de%20TrackZapDJ.%0A%0ALogiciel%20DJ%20utilis%C3%A9%20%3A%20">
-            Me prévenir de la sortie
-          </a>
-          <a class="btn btn-primary" data-launched data-download hidden>Télécharger la version gratuite</a>
-        </article>
-
-        <article class="plan paid" aria-labelledby="plan-paid">
-          <div class="plan-head">
-            <div>
-              <h3 id="plan-paid">Version payante</h3>
-              <p class="role"><span class="y">Exécuter</span> le nettoyage</p>
-            </div>
-            <span class="status next">À venir</span>
-          </div>
-          <p class="price"><strong>3,99&nbsp;€</strong><span>prix envisagé · achat unique, sans abonnement</span></p>
-          <ul>
-            <li class="plus">Tout ce que fait la version gratuite</li>
-            <li>Application du plan, après votre confirmation</li>
-            <li>Sauvegarde de votre base dans le dossier de votre choix avant toute modification</li>
-            <li>Retour en arrière en un clic : vos 5 derniers nettoyages restent restaurables</li>
-            <li>Playlists, historiques et liste Automix redirigés vers le morceau conservé</li>
-            <li>Tags transférés, cues récupérés quand c'est possible</li>
-            <li>Nettoyage bloqué si votre logiciel DJ est ouvert</li>
-            <li>Journal de chaque opération réalisée</li>
-          </ul>
-          <p class="note">
-            Proposée dans un second temps, après la version gratuite : elle n'est pas encore disponible à l'achat.
-            Le prix pourra ensuite passer à 5,99&nbsp;€ pour les nouveaux acheteurs.
-          </p>
-        </article>
-      </div>
-
-      <p class="indie">
-        <strong>Pourquoi une version payante ?</strong> TrackZapDJ est un projet indépendant.
-        La version gratuite doit être utile telle quelle ; les achats aideront à financer le temps
-        de développement et la suite du projet.
-      </p>
     </div>
   </section>
 
   <!-- COMMENT ÇA MARCHE -->
-  <section id="comment">
-    <div class="wrap">
-      <span class="kicker">Simple et guidé</span>
-      <h2>Quatre étapes, <span class="y">la dernière quand vous le décidez</span></h2>
-
+  <section id="comment" class="alt">
+    <div class="wrap" id="fonctions">
+      <span class="kicker">Comment ça marche</span>
+      <h2>Trois étapes, <span class="y">zéro prise de tête</span></h2>
       <ol class="steps">
-        <li class="step"><span class="pill free">Gratuit</span><h3>Ouvrez votre bibliothèque</h3><p>TrackZapDJ charge votre collection en un clic.</p></li>
-        <li class="step"><span class="pill free">Gratuit</span><h3>Lancez l'analyse</h3><p>Suivez la progression en direct ; vous pouvez l'annuler à tout moment.</p></li>
-        <li class="step"><span class="pill free">Gratuit</span><h3>Vérifiez et simulez</h3><p>Contrôlez chaque groupe, choisissez le morceau à garder, puis simulez le nettoyage : rien n'est modifié.</p></li>
-        <li class="step paid"><span class="pill paid">Payant · à venir</span><h3>Appliquez le nettoyage</h3><p>Confirmez : la sauvegarde est faite, puis le ménage. Un retour en arrière reste possible.</p></li>
+        <li class="step">
+          <span class="pill free">Gratuit</span>
+          <h3>Ça scanne</h3>
+          <p>TrackZapDJ repère les morceaux importés plusieurs fois : même artiste et même titre, même tonalité, BPM et durée, fichiers comparés bit à bit. Chaque groupe a sa note de confiance.</p>
+        </li>
+        <li class="step">
+          <span class="pill free">Gratuit</span>
+          <h3>Vous voyez tout avant</h3>
+          <p>La copie gardée, celles qui partent, les playlists redirigées. Pas d'accord ? Vous changez. Un remix s'est glissé dans un groupe ? Vous l'écartez. Et tout s'exporte dans Excel.</p>
+        </li>
+        <li class="step paid" id="securite">
+          <span class="pill paid">3,99 € · bientôt</span>
+          <h3>Place au ménage</h3>
+          <p>Sauvegarde auto, doublons retirés, playlists, historiques, Automix et tags passés sur la copie gardée, cues recopiés si les durées collent. Un regret ? Retour en arrière sur vos 5 derniers nettoyages.</p>
+        </li>
       </ol>
-      <p class="more"><a class="btn btn-ghost" href="/fr/fonctionnement/">Voir l'application en images →</a></p>
+      <p class="more"><a class="btn btn-ghost" href="/fr/fonctionnement/">Voir l'appli en images →</a></p>
     </div>
   </section>
 
-  <!-- FONCTIONNALITÉS -->
-  <section id="fonctions" class="alt">
+  <!-- GRATUIT OU PAYANT -->
+  <section id="versions">
     <div class="wrap">
-      <span class="kicker">Fonctionnalités</span>
-      <h2>Fini les <span class="y">doublons</span> qui encombrent vos sets</h2>
-      <p class="sub">
-        TrackZapDJ analyse votre collection, vous présente clairement les doublons trouvés et vous laisse décider.
-      </p>
-
-      <div class="grid">
-        <div class="card">
-          <div class="ico" aria-hidden="true">🔍</div>
-          <h3>Détection intelligente</h3>
-          <p>Regroupe les morceaux de même artiste et de même titre, avec un niveau de confiance pour chaque groupe.</p>
-        </div>
-        <div class="card">
-          <div class="ico" aria-hidden="true">🎼</div>
-          <h3>Analyse musicale</h3>
-          <p>Retrouve aussi les doublons cachés derrière des noms différents grâce à la tonalité, au BPM et à la durée.</p>
-        </div>
-        <div class="card">
-          <div class="ico" aria-hidden="true">🔐</div>
-          <h3>Vérification au bit près</h3>
-          <p>Compare le contenu réel des fichiers pour confirmer qu'ils sont strictement identiques.</p>
-        </div>
-        <div class="card">
-          <div class="ico" aria-hidden="true">⭐</div>
-          <h3>Meilleure version suggérée</h3>
-          <p>Propose le morceau à conserver selon vos cues, vos playlists et la qualité. Vous gardez le dernier mot.</p>
-        </div>
-        <div class="card">
-          <div class="ico" aria-hidden="true">🎚️</div>
-          <h3>Playlists, historiques, Automix, tags et cues</h3>
-          <p>Au nettoyage, vos playlists, vos historiques et votre liste Automix pointent vers le morceau conservé : vous pouvez toujours rejouer un set passé. Vos tags sont transférés, et vos hot cues / memory cues récupérés quand c'est possible.</p>
-        </div>
-        <div class="card">
-          <div class="ico" aria-hidden="true">📊</div>
-          <h3>Rapport détaillé</h3>
-          <p>Exportez dans un fichier Excel toutes les informations d'analyse des doublons, dès la version gratuite. Au nettoyage, chaque opération réalisée est tracée dans un fichier journal.</p>
+      <span class="kicker">Gratuit ou payant</span>
+      <h2>Gratuit pour voir, <span class="y">3,99 € pour faire le ménage</span></h2>
+      <div class="compare-wrap">
+        <table class="compare">
+          <caption class="sr-only">Ce qui est inclus dans la version gratuite et dans la version payante</caption>
+          <thead>
+            <tr><th scope="col"><span class="sr-only">Fonction</span></th><th scope="col" class="free">Gratuit</th><th scope="col" class="paid">3,99 €</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Scan : titre, BPM, tonalité, durée, bit à bit</th><td class="yes">✓<span class="sr-only"> inclus</span></td><td class="yes">✓<span class="sr-only"> inclus</span></td></tr>
+            <tr><th scope="row">Groupes notés, copie à garder modifiable</th><td class="yes">✓<span class="sr-only"> inclus</span></td><td class="yes">✓<span class="sr-only"> inclus</span></td></tr>
+            <tr><th scope="row">Simulation complète et export Excel</th><td class="yes">✓<span class="sr-only"> inclus</span></td><td class="yes">✓<span class="sr-only"> inclus</span></td></tr>
+            <tr><th scope="row">Doublons retirés de la collection et du dossier musique</th><td class="no">—<span class="sr-only"> non inclus</span></td><td class="yes">✓<span class="sr-only"> inclus</span></td></tr>
+            <tr><th scope="row">Playlists, historiques, Automix, tags et cues rattachés</th><td class="no">—<span class="sr-only"> non inclus</span></td><td class="yes">✓<span class="sr-only"> inclus</span></td></tr>
+            <tr><th scope="row">Sauvegarde auto et retour en arrière</th><td class="no">—<span class="sr-only"> non inclus</span></td><td class="yes">✓<span class="sr-only"> inclus</span></td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">Prix</th><td>0 €</td><td>3,99 €<small>une fois, sans abonnement</small></td></tr>
+          </tfoot>
+        </table>
+        <p class="compare-note">La version payante arrive après la version gratuite. Son prix pourra passer ensuite à 5,99&nbsp;€ pour les nouveaux acheteurs.</p>
+        <div class="compare-cta" id="lancement">
+          <a class="btn btn-yellow" data-prelaunch href="mailto:contact@trackzapdj.com?subject=Pr%C3%A9venez-moi%20de%20la%20sortie%20de%20TrackZapDJ&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20%C3%AAtre%20pr%C3%A9venu(e)%20de%20la%20sortie%20de%20la%20version%20gratuite%20de%20TrackZapDJ.%0A%0ALogiciel%20DJ%20utilis%C3%A9%20%3A%20">
+            ⚡ Me prévenir de la sortie
+          </a>
+          <a class="btn btn-yellow" data-launched data-download hidden>⚡ Scanner ma bibliothèque — gratuit</a>
+          <span class="small" data-prelaunch>Ça ouvre votre messagerie. Je vous écris uniquement pour la sortie.</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- SÉCURITÉ -->
-  <section id="securite">
-    <div class="wrap">
-      <span class="badge"><span aria-hidden="true">🛡️</span> Conçu pour la prudence</span>
-      <h2>Un nettoyage <span class="y">prudent</span>, à chaque étape</h2>
-      <p class="sub">
-        Votre bibliothèque est le fruit d'années de travail. TrackZapDJ multiplie les garde-fous avant, pendant et après le nettoyage.
-      </p>
-
-      <div class="grid">
-        <div class="card sec">
-          <div class="ico" aria-hidden="true">👀</div>
-          <h3>L'analyse ne modifie rien</h3>
-          <p>Analyser et consulter le plan ne change ni votre base, ni vos fichiers. C'est tout le principe de la version gratuite.</p>
-        </div>
-        <div class="card sec">
-          <div class="ico" aria-hidden="true">💾</div>
-          <h3>Sauvegarde automatique</h3>
-          <p>Avant toute modification, votre base, vos playlists et votre liste Automix sont copiées dans le dossier de sauvegarde que vous choisissez.</p>
-        </div>
-        <div class="card sec">
-          <div class="ico" aria-hidden="true">🧪</div>
-          <h3>Mode simulation</h3>
-          <p>Visualisez exactement ce qui serait fait, sans modifier la moindre donnée.</p>
-        </div>
-        <div class="card sec">
-          <div class="ico" aria-hidden="true">♻️</div>
-          <h3>Retour en arrière en un clic</h3>
-          <p>Les fichiers audio retirés sont rangés dans votre dossier de sauvegarde, pas supprimés. Depuis l'historique, revenez à l'état d'avant l'un de vos 5 derniers nettoyages : base et fichiers reprennent leur place.</p>
-        </div>
-        <div class="card sec">
-          <div class="ico" aria-hidden="true">✋</div>
-          <h3>Validation manuelle</h3>
-          <p>Rien n'est supprimé sans votre accord explicite, groupe par groupe. Des contrôles bloquent le nettoyage si votre logiciel DJ est ouvert, et un fichier encore utilisé n'est jamais supprimé.</p>
-        </div>
-        <div class="card sec">
-          <div class="ico" aria-hidden="true">🏠</div>
-          <h3>100 % local</h3>
-          <p>Tout est traité sur votre ordinateur. Votre bibliothèque n'est envoyée nulle part.</p>
-        </div>
-      </div>
-
-      <p class="caution">
-        <strong>Soyons honnêtes :</strong> ces garde-fous réduisent fortement les risques, mais aucun logiciel ne peut les supprimer totalement.
-        Avant un gros nettoyage, gardez aussi votre propre sauvegarde de votre bibliothèque et de vos fichiers.
-      </p>
-    </div>
-  </section>
-
-  <!-- COMPATIBILITÉ -->
-  <section id="compatibilite" class="alt">
-    <div class="wrap center">
-      <span class="kicker">Compatibilité</span>
-      <h2>Pensé pour les <span class="y">logiciels DJ</span> que vous utilisez</h2>
-      <p class="sub">TrackZapDJ démarre avec Rekordbox 6.x et 7.x, sur PC. La version Mac et d'autres logiciels DJ sont prévus ensuite.</p>
-      <h3 class="compat-label">Logiciels DJ</h3>
-      <ul class="compat">
-        <li class="soft"><strong>Rekordbox 6.x et 7.x</strong><span class="tag first">Au lancement</span></li>
-        <li class="soft"><strong>Serato DJ</strong><span class="tag next">Prévu</span></li>
-        <li class="soft"><strong>VirtualDJ</strong><span class="tag next">Prévu</span></li>
-        <li class="soft"><strong>Traktor Pro</strong><span class="tag next">Prévu</span></li>
-      </ul>
-      <h3 class="compat-label">Ordinateur</h3>
-      <ul class="compat">
-        <li class="soft"><strong>PC</strong><span class="tag first">Première version</span></li>
-        <li class="soft"><strong>Mac</strong><span class="tag next">Prévu</span></li>
-      </ul>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq">
+  <section id="faq" class="alt">
     <div class="wrap center">
-      <span class="kicker">Questions fréquentes</span>
-      <h2>Vous vous demandez…</h2>
+      <span class="kicker">FAQ</span>
+      <h2>Les questions <span class="y">qu'on me pose</span></h2>
       <div class="faq">
         <details>
-          <summary>Quelle différence entre la version gratuite et la version payante ?</summary>
-          <p>La <strong>version gratuite</strong> analyse votre bibliothèque, présente les doublons, prépare un plan d'action et permet d'exporter toute l'analyse dans un fichier Excel, mais n'exécute aucune modification. La <strong>version payante</strong> ajoutera l'exécution de ce plan : sauvegarde de la base et des fichiers dans le dossier de votre choix, retour en arrière en un clic, redirection des playlists, des historiques et de la liste Automix vers le morceau conservé, transfert des tags.</p>
+          <summary>Mes cues et mes playlists sont-ils en sécurité ?</summary>
+          <p>Oui. Playlists, historiques, Automix et tags passent sur la copie gardée. Les hot cues et memory cues y sont recopiés quand les deux fichiers ont la même durée (à 1 s près), sans doublon. Et votre base est sauvegardée avant chaque nettoyage : vous pouvez toujours revenir en arrière.</p>
         </details>
         <details>
-          <summary>Combien coûtera la version payante ? Y a-t-il un abonnement ?</summary>
-          <p>Pas d'abonnement : ce sera un achat unique. Le prix envisagé pour la première version payante est de <strong>3,99&nbsp;€</strong>. Dans une phase ultérieure, il pourra passer à 5,99&nbsp;€ pour les nouveaux acheteurs.</p>
+          <summary>Tout reste sur mon PC ?</summary>
+          <p>Oui, rien n'est envoyé sur Internet. Les fichiers retirés ne sont pas effacés : ils sont rangés dans votre dossier de sauvegarde, puis supprimés quand ils sortent de vos 5 derniers nettoyages. TrackZapDJ vous demande avant.</p>
         </details>
         <details>
-          <summary>Quand TrackZapDJ sera-t-il disponible ?</summary>
-          <p data-prelaunch>La version gratuite sortira en premier : son lancement est prévu début novembre. La version payante viendra dans un second temps ; elle n'est pas encore disponible à l'achat. Écrivez-nous pour recevoir un message à sa sortie.</p>
-          <p data-launched hidden>La version gratuite est disponible dès maintenant. La version payante viendra dans un second temps ; elle n'est pas encore disponible à l'achat.</p>
+          <summary>Il y a un abonnement ?</summary>
+          <p>Non. Le scan est gratuit, le nettoyage coûte 3,99&nbsp;€, une fois pour toutes.</p>
         </details>
-        <details>
-          <summary>La version gratuite modifie-t-elle ma bibliothèque ?</summary>
-          <p>Non. Elle lit votre bibliothèque pour l'analyser et vous montre ce qui pourrait être fait. Aucune base, aucun fichier n'est modifié.</p>
-        </details>
-        <details>
-          <summary>Mes playlists, historiques, Automix, tags et cues sont-ils préservés ?</summary>
-          <p>C'est l'un des points les plus surveillés. Lors du nettoyage, vos playlists, vos historiques et votre liste Automix pointent vers le morceau conservé : un historique reste complet et vous pouvez rejouer un set passé. Vos tags sont transférés au morceau conservé, et vos hot cues / memory cues sont récupérés quand c'est possible. Le morceau suggéré à conserver tient compte de vos cues et de vos playlists, et vous pouvez en choisir un autre.</p>
-        </details>
-        <details>
-          <summary>Est-ce que je risque de perdre des données ?</summary>
-          <p>TrackZapDJ est conçu pour limiter ce risque : sauvegarde automatique, mode simulation, validation manuelle, fichiers mis de côté plutôt que supprimés et retour en arrière en un clic. Aucun outil ne peut toutefois garantir un risque nul : gardez aussi votre propre sauvegarde avant un gros nettoyage.</p>
-        </details>
-        <details>
-          <summary>Ma bibliothèque est-elle envoyée sur Internet ?</summary>
-          <p>Non. Toute l'analyse se fait sur votre ordinateur. Vos morceaux et votre base restent chez vous.</p>
-        </details>
-        <details>
-          <summary>Quels logiciels DJ sont pris en charge ?</summary>
-          <p>Rekordbox 6.x et 7.x au lancement. Serato DJ, VirtualDJ et Traktor Pro sont prévus ensuite.</p>
-        </details>
-        <details>
-          <summary>TrackZapDJ fonctionne-t-il sur Mac ?</summary>
-          <p>Pas encore. La première version est disponible uniquement sur PC. L'application est prévue pour fonctionner sur PC et Mac : la version Mac viendra ensuite.</p>
-        </details>
-        <details>
-          <summary>L'application est-elle disponible en anglais ?</summary>
-          <p>Pas encore : elle est en français pour l'instant, mais sera disponible en anglais lors du lancement officiel.</p>
+        <details id="compatibilite">
+          <summary>C'est compatible avec quoi ?</summary>
+          <p>Rekordbox 6.x et 7.x, sur PC. TrackZapDJ analyse les morceaux présents dans votre collection Rekordbox. Mac, Serato, VirtualDJ et Traktor sont prévus. L'appli est en français pour l'instant, l'anglais arrive pour le lancement officiel.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <hr class="glow">
-
-  <!-- APPEL FINAL -->
-  <section id="lancement" class="final">
-    <div class="wrap">
-      <div class="box">
-        <span class="soon" data-prelaunch><span class="dot" aria-hidden="true"></span>Lancement prévu début novembre</span>
-        <span class="soon" data-launched hidden><span class="dot" aria-hidden="true"></span>Version gratuite disponible</span>
-        <h2>Prêt à <span class="y">zapper</span> vos doublons ?</h2>
-        <p class="sub" data-prelaunch>
-          Commencez par la version gratuite : voyez ce que TrackZapDJ trouve dans votre bibliothèque, sans rien modifier.
-          Laissez-nous un e-mail et nous vous écrirons à sa sortie.
+  <!-- HISTOIRE -->
+  <section id="histoire">
+    <div class="wrap story">
+      <details>
+        <summary>L'histoire de TrackZapDJ, en 30 secondes</summary>
+        <p>
+          Je suis <strong>Hervé</strong>, le fondateur de TrackZapDJ. J'ai commencé à mixer en club à la fin des années 80,
+          sur vinyle et sur nos chères MK2 : la New Wave, puis la House, la New Beat et l'Electro. Je n'ai jamais vraiment
+          lâché les platines, même quand ma vie professionnelle a pris le dessus : je suis resté un amateur éclairé.
         </p>
-        <p class="sub" data-launched hidden>
-          Commencez par la version gratuite : voyez ce que TrackZapDJ trouve dans votre bibliothèque, sans rien modifier.
+        <p>
+          Pendant le Covid, j'ai franchi le pas du contrôleur — une DDJ-1000 avec Rekordbox. Les gigaoctets de MP3
+          se sont accumulés, venus de sources différentes, et ma collection numérique s'est remplie de doublons.
         </p>
-        <a class="btn btn-yellow" data-prelaunch href="mailto:contact@trackzapdj.com?subject=Pr%C3%A9venez-moi%20de%20la%20sortie%20de%20TrackZapDJ&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20%C3%AAtre%20pr%C3%A9venu(e)%20de%20la%20sortie%20de%20la%20version%20gratuite%20de%20TrackZapDJ.%0A%0ALogiciel%20DJ%20utilis%C3%A9%20%3A%20">
-          ⚡ Me prévenir de la sortie
-        </a>
-        <a class="btn btn-yellow" data-launched data-download hidden>⚡ Télécharger la version gratuite</a>
-        <span class="small" data-prelaunch>Ce bouton ouvre votre messagerie. Votre adresse ne servira qu'à vous informer de la sortie de TrackZapDJ.</span>
-        <span class="small">Une question, une suggestion ? <a href="mailto:contact@trackzapdj.com">contact@trackzapdj.com</a></span>
-      </div>
+        <p>
+          Il existe des suites logicielles complètes, riches en fonctionnalités, qui gèrent aussi les doublons.
+          Mais pour mon usage, elles étaient trop chères et ne répondaient pas précisément à ce besoin.
+          J'ai donc créé TrackZapDJ, un projet indépendant : la version gratuite doit être utile telle quelle,
+          et les achats financent l'hébergement, la maintenance et les nouvelles fonctionnalités.
+        </p>
+      </details>
     </div>
   </section>
 
